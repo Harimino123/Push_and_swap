@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 22:20:38 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 12:21:23 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 14:01:04 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_list_node *build_stack(char **arr);
 void sort_stack(t_list_node *stack_a, t_list_node *stack_b, int ac);
 
 void insert_at_end(t_list_node **head, int data);
+int list_size(t_list_node *list);
 void print_list(t_list_node *head);
 void free_list(t_list_node **list);
 
@@ -57,7 +58,8 @@ void rrr(t_list_node **list_a, t_list_node **list_b);
 void pa(t_list_node **src, t_list_node **dest);
 void pb(t_list_node **src, t_list_node **dest);
 
-void sort_three_numbers(t_list_node **list);
+void find_small(t_list_node **stack);
+void find_small2(t_list_node **stack);
 
 
 #endif

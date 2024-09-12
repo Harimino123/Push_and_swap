@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:48:48 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 12:25:29 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:41:11 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,5 @@ int list_size(t_list_node *list)
         size++;
         list = list->next;
     }
-    return size;
+    return (size);
 }

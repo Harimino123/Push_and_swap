@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:05:44 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 12:33:03 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:38:08 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,12 @@ void ft_reverse_rotate(t_list_node **head_ref)
         second_last = find_last;
         find_last = find_last->next;
     }
-    second_last->next = NULL;
-    find_last->next = *head_ref;
-    *head_ref = find_last;
+    if (second_last != NULL)
+    {
+        second_last->next = NULL;
+        find_last->next = *head_ref;
+        *head_ref = find_last;
+    }
 }
 
 void ft_rotate(t_list_node **head_ref)

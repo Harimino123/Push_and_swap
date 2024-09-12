@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:01:30 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 12:32:51 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 14:02:26 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,27 @@ void sort_three(t_list_node **list)
     }
 }
 
+void sort_four(t_list_node **list_a, t_list_node **list_b)
+{
+    find_small(list_a);
+    pb(list_a, list_b);
+    sort_three(list_a);
+    pa(list_b, list_a);
+}
+
+void sort_five(t_list_node **list_a, t_list_node **list_b)
+{
+    find_small(list_a);
+    pb(list_a, list_b);
+    find_small2(list_a);
+    pb(list_a, list_b);
+    if ((*list_b)->index < (*list_b)->next->index)
+        sb(list_b);
+    sort_three(list_a);
+    pa(list_b, list_a);
+    pa(list_b, list_a);   
+}
+
 void sort_stack(t_list_node *stack_a, t_list_node *stack_b, int ac)
 {
     int ac_count;
@@ -59,5 +80,11 @@ void sort_stack(t_list_node *stack_a, t_list_node *stack_b, int ac)
         sort_two(&stack_a);
     else if (ac_count == 3)
         sort_three(&stack_a);
+    else if (ac_count == 4)
+        sort_four(&stack_a, &stack_b);
+    else if (ac_count == 5)
+        sort_five(&stack_a, &stack_b);
+    else if (ac_count > 5)
+        sort_big(&stack_a, &stack_b);
     print_list(stack_a);
 }
