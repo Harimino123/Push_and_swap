@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:53:51 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 13:57:11 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 19:24:28 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,33 @@ void find_small2(t_list_node **stack)
         ra(stack);
         current = *stack;
     }
+}
+
+int check_if_indice(t_list_node *stack_a, int min, int max)
+{
+    int i;
+
+    i = 0;
+    while (stack_a)
+    {
+        if (stack_a->index >= min && stack_a->index <= max)
+            i++;
+        stack_a = stack_a->next;
+    }
+    return (i);
+}
+
+int position_in_list(t_list_node *stack_b, int nbr)
+{
+    int i;
+
+    i = 0;
+    while (stack_b)
+    {
+        if ((stack_b)->index == nbr)
+            return (i);
+        i++;
+        stack_b = stack_b->next;
+    }
+    return (0);
 }

@@ -6,11 +6,28 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:00:52 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 12:00:42 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 17:36:56 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int first_indice(t_list_node **list)
+{
+    return ((*list)->index);
+}
+
+int second_indice(t_list_node **list)
+{   
+    return ((*list)->next->index);
+}
+
+int check_f_s(t_list_node **stack_b, int j)
+{
+    if(!(first_indice(stack_b) < j && second_indice(stack_b) >= j))
+        return (0);
+    return (1);
+}
 
 void free_array(char **arr)
 {

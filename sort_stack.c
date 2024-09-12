@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:01:30 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 14:02:26 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 18:51:57 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,20 +71,19 @@ void sort_five(t_list_node **list_a, t_list_node **list_b)
     pa(list_b, list_a);   
 }
 
-void sort_stack(t_list_node *stack_a, t_list_node *stack_b, int ac)
+void sort_stack(t_list_node **stack_a, t_list_node **stack_b, int ac)
 {
     int ac_count;
 
     ac_count = ac - 1;
     if (ac_count == 2)
-        sort_two(&stack_a);
+        sort_two(stack_a);
     else if (ac_count == 3)
-        sort_three(&stack_a);
+        sort_three(stack_a);
     else if (ac_count == 4)
-        sort_four(&stack_a, &stack_b);
+        sort_four(stack_a, stack_b);
     else if (ac_count == 5)
-        sort_five(&stack_a, &stack_b);
-    else if (ac_count > 5)
-        sort_big(&stack_a, &stack_b);
-    print_list(stack_a);
+        sort_five(stack_a, stack_b);
+    else
+        sort_big(stack_a, stack_b);
 }

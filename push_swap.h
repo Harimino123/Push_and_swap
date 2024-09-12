@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 22:20:38 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 14:01:04 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 19:24:44 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void free_array(char **arr);
 int ft_check_order(char **str);
 long int ft_atoi_long(const char *str);
 t_list_node *build_stack(char **arr);
-void sort_stack(t_list_node *stack_a, t_list_node *stack_b, int ac);
+void sort_stack(t_list_node **stack_a, t_list_node **stack_b, int ac);
 
 void insert_at_end(t_list_node **head, int data);
 int list_size(t_list_node *list);
@@ -60,6 +60,13 @@ void pb(t_list_node **src, t_list_node **dest);
 
 void find_small(t_list_node **stack);
 void find_small2(t_list_node **stack);
+void sort_big(t_list_node **stack_a, t_list_node **stack_b);
+
+int first_indice(t_list_node **list);
+int second_indice(t_list_node **list);
+int check_f_s(t_list_node **stack_b, int j);
+int check_if_indice(t_list_node *stack_a, int min, int max);
+int position_in_list(t_list_node *stack_b, int nbr);
 
 
 #endif

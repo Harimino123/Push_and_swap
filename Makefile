@@ -6,7 +6,7 @@
 #    By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/23 12:41:26 by hrasolof          #+#    #+#              #
-#    Updated: 2024/09/12 13:22:02 by hrasolof         ###   ########.fr        #
+#    Updated: 2024/09/12 18:33:28 by hrasolof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRCS = main.c \
 		move.c \
 		utils.c \
 		sort_stack.c \
-		sort_utils.c
+		sort_utils.c \
+		sort_big.c
 
 LIBFT_PATH = Libft
 
