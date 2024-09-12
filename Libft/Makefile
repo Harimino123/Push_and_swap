@@ -6,7 +6,7 @@
 #    By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/14 09:55:22 by hrasolof          #+#    #+#              #
-#    Updated: 2024/09/09 00:00:15 by hrasolof         ###   ########.fr        #
+#    Updated: 2024/09/12 11:05:25 by hrasolof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,6 @@ SRCS =		ft_isalpha.c \
 		ft_striteri.c \
 		ft_split.c \
 		ft_strmapi.c \
-		ft_lstnew_bonus.c \
-		ft_lstsize_bonus.c \
-		ft_lstadd_front_bonus.c  \
 		ft_strcmp.c \
 		ft_strcat.c \
 		ft_strcpy.c

@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:48:48 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/11 23:48:48 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:25:29 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void print_list(t_list_node *head)
     temp = head;
     while (temp != NULL)
     {
-        printf("%d\n", temp->number);
+        printf("Number = %d iD = %d\n", temp->number, temp->index);
         temp = temp->next;
     }
     printf("NULL\n");

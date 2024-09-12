@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 08:28:09 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/09 00:01:06 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 11:04:26 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 # include <unistd.h>
 //# include <string.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list_node;
+// typedef struct s_list
+// {
+// 	void			*content;
+// 	struct s_list	*next;
+// }					t_list;
 
-t_list_node				*ft_lstnew(void *content);
+// t_list_node				*ft_lstnew(void *content);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-void				ft_lstadd_front(t_list_node **lst, t_list_node *news);
+// void				ft_lstadd_front(t_list_node **lst, t_list_node *news);
 void				ft_striteri(char *str, void (*function)(unsigned int,
 							char *));
 void				*ft_calloc(size_t n_block, size_t size);
@@ -53,7 +53,7 @@ char				*ft_strrchr(const char *str, int c);
 char				*ft_itoa(int n);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strcpy(char *dest, const char *src);
-int					ft_lstsize(t_list_node *lst);
+// int					ft_lstsize(t_list_node *lst);
 int					ft_memcmp(const void *str1, const void *str2, size_t n);
 int					ft_strncmp(const char *str1, const char *str2, size_t n);
 int					ft_atoi(const char *str);

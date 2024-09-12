@@ -6,7 +6,7 @@
 #    By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/23 12:41:26 by hrasolof          #+#    #+#              #
-#    Updated: 2024/09/11 23:54:40 by hrasolof         ###   ########.fr        #
+#    Updated: 2024/09/12 12:22:55 by hrasolof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,13 +18,13 @@ RM = rm -rf
 
 SRCS = main.c \
 		ft_copy.c \
-		ft_error_check.c \
+		ft_check_error.c \
 		ft_init_node.c \
 		node_setting.c \
-		# utils/move.c \
-		# utils/node_setting.c \
-		# utils/other_utils.c \
-		# utils/utils.c
+		move_set.c \
+		move.c \
+		utils.c \
+		sort_stack.c
 
 LIBFT_PATH = Libft
 

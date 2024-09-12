@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:37:40 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/11 23:37:40 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/12 11:23:34 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void i_stack(t_list_node **stack)
     t_list_node	*head;
 	int		index;
 
-	index = 0;
+	index = 1;
 	head = get_next_min(stack);
 	while (head)
 	{
@@ -56,15 +56,15 @@ t_list_node *build_stack(char **arr)
     int i;
     int number;
 
-    stack = NULL;
+    stack = NULL; 
     i = 0;
     while (arr[i])
     {
-        number = ft_atoi_long(arr[i]);
+        number = ft_atoi(arr[i]);
         insert_at_end(&stack, number);
         i++;
     }
-    i_stack(stack);
+    i_stack(&stack);
     return (stack);
 }
 
