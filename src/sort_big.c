@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void push_b_to_a(t_list_node **stack_b, t_list_node **stack_a)
 {
@@ -22,7 +22,12 @@ void push_b_to_a(t_list_node **stack_b, t_list_node **stack_a)
         if ((*stack_b)->index == i)
             pa(stack_b, stack_a);
         else if (position_in_list((*stack_b), i) <= (list_size(*stack_b) / 2))
-            rb(stack_b);    
+        {
+            if ((*stack_a) && first_indice(stack_a) < i)
+                rr(stack_a, stack_b);  // Try to rotate both stacks at once
+            else
+                rb(stack_b);
+        }   
         else
             rrb(stack_b);
     }
@@ -49,25 +54,24 @@ void push_a_to_b(t_list_node **stack_a, t_list_node **stack_b, int min, int max)
         else
             ra(stack_a);
     }
-    
 }
 
 void sort_big(t_list_node **stack_a, t_list_node **stack_b)
 {
     int maximum;
-    int averrage;
+    int average;
     int minimum;
 
     maximum = list_size(*stack_a);
     if (maximum <= 100)
-        averrage = 24;
+        average = 24;
     else
-        averrage = 60;
+        average = list_size(*stack_a) / 8;
     maximum = 0;
     while (*stack_a)
     {
         minimum = maximum;
-        maximum = averrage + maximum;
+        maximum = average + maximum;
         push_a_to_b(stack_a, stack_b, minimum, maximum);
     }
     push_b_to_a(stack_b, stack_a);  

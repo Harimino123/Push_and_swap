@@ -12,17 +12,6 @@
 
 #include "push_swap.h"
 
-void    print_tmp(char **tmp)
-{
-    int i = 0;
-
-    while (tmp[i])
-    {
-        printf("tmp[%d]: %s\n", i, tmp[i]);
-        i++;
-    }
-}
-
 int main(int ac, char **av)
 {
     t_list_node  *stack_a;
@@ -44,7 +33,6 @@ int main(int ac, char **av)
     if (ft_check_order(tmp) == 1)
         return(free_array(tmp), 0);
     stack_a = build_stack(tmp);
-    
     sort_stack(&stack_a, &stack_b, ac);
     free_list(&stack_a);
     free_array(tmp);

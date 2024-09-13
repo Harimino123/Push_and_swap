@@ -10,24 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int first_indice(t_list_node **list)
-{
-    return ((*list)->index);
-}
-
-int second_indice(t_list_node **list)
-{   
-    return ((*list)->next->index);
-}
-
-int check_f_s(t_list_node **stack_b, int j)
-{
-    if((first_indice(stack_b) < j && second_indice(stack_b) >= j))
-        return (1);
-    return (0);
-}
+#include "../push_swap.h"
 
 void free_array(char **arr)
 {
@@ -43,17 +26,6 @@ void free_array(char **arr)
         }
         free(arr);
     }
-}
-
-int	ft_printerror(char *str)
-{
-    write(2, str, ft_strlen(str));
-	return (0);
-}
-
-int ft_is_space(int c)
-{
-    return (c == ' ' || c == '\t' || c == '\v' || c == '\f' || c == '\n');
 }
 
 long int ft_atoi_long(const char *str)

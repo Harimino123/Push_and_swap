@@ -17,16 +17,18 @@ FLAGS_C = -Wall -Werror -Wextra -g
 RM = rm -rf
 
 SRCS = 	main.c \
-		ft_copy.c \
-		ft_check_error.c \
-		ft_init_node.c \
-		node_setting.c \
-		move_set.c \
-		move.c \
-		utils.c \
-		sort_stack.c \
-		sort_utils.c \
-		sort_big.c
+		src/ft_copy.c \
+		src/ft_check_error.c \
+		src/ft_init_node.c \
+		src/node_setting.c \
+		src/move_set.c \
+		src/move.c \
+		src/move2.c \
+		src/utils.c \
+		src/other_utils.c \
+		src/sort_stack.c \
+		src/sort_utils.c \
+		src/sort_big.c
 
 LIBFT_PATH = Libft
 

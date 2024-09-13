@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void find_small(t_list_node **stack)
 {
@@ -63,4 +63,11 @@ int position_in_list(t_list_node *stack_b, int nbr)
         stack_b = stack_b->next;
     }
     return (0);
+}
+
+void	rrr(t_list_node **a, t_list_node **b)
+{
+	ft_reverse_rotate(a);
+	ft_reverse_rotate(b);
+	write(1, "rrr\n", 4);
 }

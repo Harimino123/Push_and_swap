@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_list_node *create_node(int data)
 {
-    t_list_node  *new_node = (t_list_node *)malloc(sizeof(t_list_node));
+    t_list_node  *new_node;
+
+    new_node = (t_list_node *)malloc(sizeof(t_list_node));
     if (!new_node)
         exit(1);
     new_node->number = data;
@@ -23,7 +25,6 @@ t_list_node *create_node(int data)
     return (new_node);
 }
 
-// Function to insert a node at the beginning
 void insert_at_beginning(t_list_node **head, int data)
 {
     t_list_node  *new_node;
@@ -33,7 +34,6 @@ void insert_at_beginning(t_list_node **head, int data)
     *head = new_node;
 }
 
-// Function to insert a node at the end
 void insert_at_end(t_list_node **head, int data)
 {
     t_list_node  *new_node;
@@ -51,21 +51,6 @@ void insert_at_end(t_list_node **head, int data)
     temp->next = new_node;
 }
 
-// Function to print the linked list
-void print_list(t_list_node *head)
-{
-    t_list_node  *temp = head;
-
-    temp = head;
-    while (temp != NULL)
-    {
-        printf("Number = %d iD = %d\n", temp->number, temp->index);
-        temp = temp->next;
-    }
-    printf("NULL\n");
-}
-
-// Function to free a list
 void free_list(t_list_node **list)
 {
     t_list_node  *temp;

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char    **free_tmp(char **tmp, int i)
 {
@@ -27,20 +27,20 @@ char **copy_input(char **av)
     int     ac;
     int     i;
 
-    if (ft_strlen(av[1]) > 1 && ft_strchr(av[1], ' ')) // Allocate memory for tmp to hold the arguments
+    if (ft_strlen(av[1]) > 1 && ft_strchr(av[1], ' '))
         tmp = ft_split(av[1], ' ');
     else
     {
         ac = 0;
-        while (av[ac]) // Get the count of arguments
+        while (av[ac])
             ac++;
         tmp = (char **)malloc(sizeof(char *) * (ac + 1));
         if (!tmp)
             return (NULL);
         i = 1;
-        while (i < ac) // Copy the arguments into tmp
+        while (i < ac)
         {
-            tmp[i - 1] = ft_strdup(av[i]); // Duplicate each argument string
+            tmp[i - 1] = ft_strdup(av[i]);
             if (!tmp[i - 1])
                 return (free_tmp(tmp, i )); 
             i++;

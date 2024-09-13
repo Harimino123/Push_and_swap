@@ -15,7 +15,7 @@
 
 #include "Libft/libft.h"
 #include <unistd.h>
-#include <limits.h> 
+#include <limits.h>
 
 
 typedef struct s_list_node
@@ -31,14 +31,12 @@ int ft_check_error(char **tmp);
 void free_array(char **arr);
 int ft_check_order(char **str);
 long int ft_atoi_long(const char *str);
-t_list_node *build_stack(char **arr);
-void sort_stack(t_list_node **stack_a, t_list_node **stack_b, int ac);
 
 void insert_at_end(t_list_node **head, int data);
 int list_size(t_list_node *list);
-void print_list(t_list_node *head);
 void free_list(t_list_node **list);
 
+int ft_is_space(int c);
 int	ft_printerror(char *str);
 
 void ft_swap(t_list_node **head_ref);
@@ -58,6 +56,8 @@ void rrr(t_list_node **a, t_list_node **b);
 void pa(t_list_node **a, t_list_node **b);
 void pb(t_list_node **a, t_list_node **b);
 
+t_list_node *build_stack(char **arr);
+void sort_stack(t_list_node **stack_a, t_list_node **stack_b, int ac);
 void find_small(t_list_node **stack);
 void find_small2(t_list_node **stack);
 void sort_three(t_list_node **list);

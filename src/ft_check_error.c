@@ -10,13 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int  is_number(const char *str)
 {
-    int i ;
-
-    i = 0;
     if (*str == '+' || *str == '-')
         str++;
     if (*str == '\0')

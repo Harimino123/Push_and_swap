@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static t_list_node	*get_next_min(t_list_node **stack)
 {
@@ -52,7 +52,7 @@ void i_stack(t_list_node **stack)
 
 t_list_node *build_stack(char **arr)
 {
-    t_list_node *stack; // Initialize the stack as empty
+    t_list_node *stack;
     int i;
     int number;
 
