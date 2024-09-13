@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 22:33:30 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/11 22:33:30 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 14:49:28 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ char **copy_input(char **av)
         ac = 0;
         while (av[ac]) // Get the count of arguments
             ac++;
-        tmp = (char **)malloc(sizeof(char *) * ac);
+        tmp = (char **)malloc(sizeof(char *) * (ac + 1));
         if (!tmp)
             return (NULL);
-        i = 0;
+        i = 1;
         while (i < ac) // Copy the arguments into tmp
         {
             tmp[i - 1] = ft_strdup(av[i]); // Duplicate each argument string
             if (!tmp[i - 1])
-                return (free_tmp(tmp, i)); 
+                return (free_tmp(tmp, i )); 
             i++;
         }
         tmp[ac - 1] = NULL;

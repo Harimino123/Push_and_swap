@@ -6,17 +6,17 @@
 #    By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/23 12:41:26 by hrasolof          #+#    #+#              #
-#    Updated: 2024/09/12 18:33:28 by hrasolof         ###   ########.fr        #
+#    Updated: 2024/09/13 16:57:15 by hrasolof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-FLAGS_C = -Wall -Werror -Wextra
+FLAGS_C = -Wall -Werror -Wextra -g
 
 RM = rm -rf
 
-SRCS = main.c \
+SRCS = 	main.c \
 		ft_copy.c \
 		ft_check_error.c \
 		ft_init_node.c \
@@ -36,7 +36,7 @@ OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS) $(LIBFT)
 	@echo "Compiling $(NAME)..."
-	cc $(FLAGS_C) $(OBJS) $(LIBFT) -o $(NAME)
+	cc $(FLAGS_C) $(SRCS) $(LIBFT) -o $(NAME)
 
 all: $(NAME)
 

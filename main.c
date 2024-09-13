@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 22:20:40 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 18:53:01 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 14:51:01 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int main(int ac, char **av)
     if (ft_check_order(tmp) == 1)
         return(free_array(tmp), 0);
     stack_a = build_stack(tmp);
+    
     sort_stack(&stack_a, &stack_b, ac);
     free_list(&stack_a);
+    free_array(tmp);
 }

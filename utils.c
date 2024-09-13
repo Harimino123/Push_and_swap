@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:00:52 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 17:36:56 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:29:17 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int second_indice(t_list_node **list)
 
 int check_f_s(t_list_node **stack_b, int j)
 {
-    if(!(first_indice(stack_b) < j && second_indice(stack_b) >= j))
-        return (0);
-    return (1);
+    if((first_indice(stack_b) < j && second_indice(stack_b) >= j))
+        return (1);
+    return (0);
 }
 
 void free_array(char **arr)
@@ -41,7 +41,7 @@ void free_array(char **arr)
             free(arr[i]);
             i++;
         }
-        // free(arr);
+        free(arr);
     }
 }
 

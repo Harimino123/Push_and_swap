@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:01:30 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 18:51:57 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 12:58:19 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,22 @@ void sort_four(t_list_node **list_a, t_list_node **list_b)
 
 void sort_five(t_list_node **list_a, t_list_node **list_b)
 {
-    find_small(list_a);
-    pb(list_a, list_b);
-    find_small2(list_a);
-    pb(list_a, list_b);
+    while (1)
+    {
+        if (list_size(*list_b) == 2)
+            break ;
+        if ((*list_a)->index == 1 || ((*list_a)->index == 2))
+            pb(list_a, list_b);
+        else
+            ra(list_a);
+    }
     if ((*list_b)->index < (*list_b)->next->index)
-        sb(list_b);
+    {
+        if ((*list_a)->index > (*list_a)->next->index)
+            ss(list_a, list_b);
+        else
+            sb(list_b);
+    }
     sort_three(list_a);
     pa(list_b, list_a);
     pa(list_b, list_a);   

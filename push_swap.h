@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 22:20:38 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 19:24:44 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:11:41 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,17 @@ void ft_reverse_rotate(t_list_node **head_ref);
 void ft_rotate(t_list_node **head_ref);
 void ft_push(t_list_node **src, t_list_node **dest);
 
-void sa(t_list_node **list);
-void sb(t_list_node **list);
-void ss(t_list_node **list_a, t_list_node **list_b);
-void ra(t_list_node **list);
-void rb(t_list_node **list);
-void rr(t_list_node **list_a, t_list_node **list_b);
-void rra(t_list_node **list);
-void rrb(t_list_node **list);
-void rrr(t_list_node **list_a, t_list_node **list_b);
-void pa(t_list_node **src, t_list_node **dest);
-void pb(t_list_node **src, t_list_node **dest);
+void sa(t_list_node **a);
+void sb(t_list_node **b);
+void ss(t_list_node **a, t_list_node **b);
+void ra(t_list_node **a);
+void rb(t_list_node **b);
+void rr(t_list_node **a, t_list_node **b);
+void rra(t_list_node **a);
+void rrb(t_list_node **b);
+void rrr(t_list_node **a, t_list_node **b);
+void pa(t_list_node **a, t_list_node **b);
+void pb(t_list_node **a, t_list_node **b);
 
 void find_small(t_list_node **stack);
 void find_small2(t_list_node **stack);

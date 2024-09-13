@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:53:51 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 19:24:28 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:18:57 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int position_in_list(t_list_node *stack_b, int nbr)
 {
     int i;
 
-    i = 0;
+    i = 1;
     while (stack_b)
     {
         if ((stack_b)->index == nbr)
