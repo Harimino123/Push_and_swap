@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 14:53:22 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/13 17:17:09 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/13 17:53:54 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,18 +60,14 @@ void sort_big(t_list_node **stack_a, t_list_node **stack_b)
 
     maximum = list_size(*stack_a);
     if (maximum <= 100)
-        {
-            maximum = list_size(*stack_a);
-            averrage = maximum / 4;
-        }
+        averrage = 24;
     else
-        averrage = 61;
+        averrage = 60;
     maximum = 0;
     while (*stack_a)
     {
-        maximum = list_size(stack_a) / 4;
         minimum = maximum;
-        maximum = averrage + minimum;
+        maximum = averrage + maximum;
         push_a_to_b(stack_a, stack_b, minimum, maximum);
     }
     push_b_to_a(stack_b, stack_a);  
