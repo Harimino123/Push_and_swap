@@ -6,7 +6,7 @@
 #    By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/14 09:55:22 by hrasolof          #+#    #+#              #
-#    Updated: 2024/09/12 11:05:25 by hrasolof         ###   ########.fr        #
+#    Updated: 2024/09/14 12:09:12 by hrasolof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS =		ft_isalpha.c \
  		ft_strlcpy.c \
  		ft_strlcat.c \
  		ft_toupper.c \
+		ft_strjoin.c \
  		ft_tolower.c \
  		ft_strchr.c \
  		ft_strrchr.c \

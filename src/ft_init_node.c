@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:37:40 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 11:23:34 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/14 12:23:38 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static t_list_node	*get_next_min(t_list_node **stack)
 {
 	t_list_node	*head;
 	t_list_node	*min;
-	int		has_min;
+	int			has_min;
 
 	min = NULL;
 	has_min = 0;
@@ -36,10 +36,10 @@ static t_list_node	*get_next_min(t_list_node **stack)
 	return (min);
 }
 
-void i_stack(t_list_node **stack)
+void	i_stack(t_list_node **stack)
 {
-    t_list_node	*head;
-	int		index;
+	t_list_node	*head;
+	int			index;
 
 	index = 1;
 	head = get_next_min(stack);
@@ -50,21 +50,17 @@ void i_stack(t_list_node **stack)
 	}
 }
 
-t_list_node *build_stack(char **arr)
+void	build_stack(char **arr, t_list_node **stack_a)
 {
-    t_list_node *stack;
-    int i;
-    int number;
+	int	i;
+	int	number;
 
-    stack = NULL; 
-    i = 0;
-    while (arr[i])
-    {
-        number = ft_atoi(arr[i]);
-        insert_at_end(&stack, number);
-        i++;
-    }
-    i_stack(&stack);
-    return (stack);
+	i = 0;
+	while (arr[i])
+	{
+		number = ft_atoi(arr[i]);
+		insert_at_end(stack_a, number);
+		i++;
+	}
+	i_stack(stack_a);
 }
-

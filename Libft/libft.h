@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 08:28:09 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/12 11:04:26 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/14 12:10:36 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char				*ft_strmapi(char const *str, char (*function)(unsigned int,
 							char));
 char				**ft_split(char const *str, char separator);
 char				*ft_strtrim(char const *s1, char const *set);
-// char		*ft_strjoin(char const *dest, char const *src);
+char				*ft_strjoin(char *dest, char const *src);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 char				*ft_substr(char const *str, unsigned int start, size_t len);
 char				*ft_strdup(const char *src);
