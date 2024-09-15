@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrasolof <hrasolof@student.42antanana      +#+  +:+       +#+        */
+/*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 09:48:05 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/03/10 18:07:17 by hari             ###   ########.fr       */
+/*   Updated: 2024/09/15 10:34:43 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

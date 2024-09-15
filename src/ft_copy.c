@@ -6,7 +6,7 @@
 /*   By: hrasolof <hrasolof@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 22:33:30 by hrasolof          #+#    #+#             */
-/*   Updated: 2024/09/14 13:29:49 by hrasolof         ###   ########.fr       */
+/*   Updated: 2024/09/15 10:32:43 by hrasolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,14 @@ char	**copy_input(int ac, char **av)
 	char	**tmp2;
 	int		i;
 
-	i = 1;
-	while (i <= ac - 1)
+	i = 0;
+	while (++i <= ac - 1)
 	{
 		if (!space(av[i]))
 		{
-			if (tmp)
-				free(tmp);
+			if (i == 1)
+				return (NULL);
+			free(tmp);
 			return (NULL);
 		}
 		if (i == 1)
@@ -56,7 +57,6 @@ char	**copy_input(int ac, char **av)
 			tmp = ft_strjoin(tmp, " ");
 			tmp = ft_strjoin(tmp, av[i]);
 		}
-		i++;
 	}
 	tmp2 = ft_split(tmp, ' ');
 	free(tmp);
